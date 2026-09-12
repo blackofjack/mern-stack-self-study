@@ -1,1 +1,0 @@
-# mern-stack-self-study
