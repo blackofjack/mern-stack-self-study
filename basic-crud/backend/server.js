@@ -1,15 +1,23 @@
 import express from "express";
 import cors from "cors"
-import records from "./routes/record.js"
+import records from "./routes/EmployeeRoutes.js"
+import connectDB from "./config/connection.js"
+import employeeRoute from "./routes/EmployeeRoutes.js"
 
-const PORT = proccess.env.PORT || 5000;
+dotenv.config();
+connectDB();
+
+
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/record", records);
+app.use("/api/employees", employeeRoutes);
 
 //start the Express Server 
+
+const PORT = proccess.env.PORT || 5000;
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
