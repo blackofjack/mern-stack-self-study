@@ -1,4 +1,3 @@
-import { Timestamp } from "mongodb";
 import mongoose from "mongoose";
 
 const employeeSchema = new mongoose.Schema(
@@ -24,7 +23,7 @@ const employeeSchema = new mongoose.Schema(
 
 const Employee = mongoose.model(
     "Employee",
-    employeeScheme
+    employeeSchema
 );
 
 export default Employee;
